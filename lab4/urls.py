@@ -20,4 +20,11 @@ from report import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='Index'),
+    path('ReportListAllInvoices', views.ReportListAllInvoices),
+    path('ReportProductsSold', views.ReportProductsSold),
+    path('ReportListAllProducts', views.ReportListAllProducts),
+    path('ReportListAllReceipts', views.ReportListAllReceipts),
+    path('ReportUnpaidInvoices', views.ReportUnpaidInvoices),
+    path('ReportGroupBy', views.ReportGroupBy),
+
 ]
