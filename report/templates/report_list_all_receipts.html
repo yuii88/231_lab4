@@ -6,29 +6,31 @@
         <tr>
             <th>#</th>
             {% for name in column_name %}
-            <th>{{ name }} </th>
+            <th>{{ name }}</th>
             {% endfor %}
         </tr>
+        
     {% for lineitem in data %}
         <tr>
             <td>{{ forloop.counter }}</td>
             <td>{{ lineitem.receipt_no }}</td>
-            <td>{{ lineitem.date }}</td>
+            <td>{{ lineitem.receipt_date }}</td>
             <td>{{ lineitem.customer_code }}</td>
-            <td>{{ lineitem.name }}</td>
-            <td>{{ lineitem.payment_method }}</td>
-            <td>{{ lineitem.total_receipt }}</td>
+            <td>{{ lineitem.customer_name }}</td>
+            <td>{{ lineitem.payment_name }}</td>
             <td>{{ lineitem.payment_reference }}</td>
             <td>{{ lineitem.remarks }}</td>
+            <td>{{ lineitem.total_received }}</td>
             <td>{{ lineitem.invoice_no }}</td>
-            <td>{{ lineitem.Date }}</td>
-            <td>{{ lineitem.amount_due }}</td>
+            <td>{{ lineitem.invoice_date }}</td>
+            <td>{{ lineitem.invoice_full_amount }}</td>
+            <td>{{ lineitem.invoice_amount_remain }}</td>
             <td>{{ lineitem.amount_paid_here }}</td>
             
-        <tr>
+        </tr>
     {% endfor %}
     
-    {% endblock %}
+{% endblock %}
     
 
 </body>
